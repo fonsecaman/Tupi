@@ -1,0 +1,23 @@
+{
+  "name": "tupi",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ABS-org/tupi",
+  "authors": [
+    "Daniel Torres <danielfeelfine@gmail.com>",
+    "Thiago de Lima <tdelima@gmail.com>",
+    "Alberto Souza <albertosouza@gmail.com>"
+  ],
+  "description": "Coleção de estilos e componentes reutilizáveis.",
+  "keywords": [
+    "estilos",
+    "components",
+    "coleções"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ]
+}
