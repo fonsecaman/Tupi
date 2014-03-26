@@ -45,6 +45,26 @@ module.exports = function (grunt) {
     },
 
     /************************************
+     * grunt-contrib-watch
+     * Watch some files and tasks
+     ************************************/
+    watch: {
+      html: {
+        files: '/**/*.html',
+        options: {
+          livereload: true
+        }
+      },
+      stylesheets: {
+        files: '/src/less/**/*.less',
+        tasks: ['less'],
+        options: {
+          livereload: true
+        }
+      }
+    },
+
+    /************************************
      * grunt-bump
      * Bump package version, create tag, commit, push...
      ************************************/
@@ -83,6 +103,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-bump');
 
   // Default task
-  grunt.registerTask('default', ['dist-stylesheets', 'test']);
+  grunt.registerTask('default', ['dist-stylesheets', 'watch']);
 
 };
