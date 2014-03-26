@@ -14,11 +14,11 @@
     "componentes",
     "coleções"
   ],
-  "author": {
+  "author": [
     "Daniel Torres <daniel@updigital.me>",
     "Thiago de Lima <tdelima@gmail.com>",
     "Alberto Souza <albertosouza@gmail.com>"
-  },
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ABS-org/tupi/issues"
