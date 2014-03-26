@@ -28,7 +28,7 @@ module.exports = function (grunt) {
         updateConfigs: [],
         commit: true,
         commitMessage: '%VERSION%',
-        commitFiles: ['package.json', 'bower.json', 'www/dist/'], // '-a' for all files
+        commitFiles: ['package.json', 'bower.json', 'dist/'], // '-a' for all files
         createTag: true,
         tagName: '%VERSION%',
         tagMessage: '%VERSION%',
@@ -52,7 +52,7 @@ module.exports = function (grunt) {
 
   // Use grunt-bump for changing version number
   grunt.loadNpmTasks('grunt-bump');
-  
+
   // Default task
   grunt.registerTask('default', ['test']);
 
