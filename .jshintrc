@@ -1,0 +1,9 @@
+// .jshintrc
+//
+//
+
+{
+    "maxerr"        : 5,
+    "camelcase"     : false,
+    "indent"        : 2
+}
