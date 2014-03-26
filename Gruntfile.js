@@ -33,6 +33,10 @@ module.exports = function (grunt) {
     },
 
 
+    /************************************
+     * grunt-contrib-jshint
+     * Validate files with JSHint
+     ************************************/
     jshint: {
       options: {
         jshintrc: '.jshintrc'
