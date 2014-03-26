@@ -16,6 +16,26 @@ module.exports = function (grunt) {
         jshintrc: '.jshintrc'
       },
       all: ['Gruntfile.js', 'src/js/**/*.js']
+    },
+
+    /************************************
+     * grunt-bump
+     * Bump package version, create tag, commit, push...
+     ************************************/
+    bump: {
+      options: {
+        files: ['package.json', 'bower.json'],
+        updateConfigs: [],
+        commit: true,
+        commitMessage: '%VERSION%',
+        commitFiles: ['package.json', 'bower.json', 'www/dist/'], // '-a' for all files
+        createTag: true,
+        tagName: '%VERSION%',
+        tagMessage: '%VERSION%',
+        push: true,
+        pushTo: 'master',
+        gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d' // options to use with '$ git describe'
+      }
     }
 
   });
@@ -30,6 +50,9 @@ module.exports = function (grunt) {
   // Default task
   grunt.registerTask('test', ['jshint']);
 
+  // Use grunt-bump for changing version number
+  grunt.loadNpmTasks('grunt-bump');
+  
   // Default task
   grunt.registerTask('default', ['test']);
 
