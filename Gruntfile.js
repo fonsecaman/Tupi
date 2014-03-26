@@ -11,6 +11,28 @@ module.exports = function (grunt) {
     // Metadata
     pkg: grunt.file.readJSON('package.json'),
 
+    /************************************
+     * grunt-contrib-less
+     * LESS Task, compile and minify stylesheets
+     ************************************/
+    less: {
+      compile: {
+        files: {
+          'dist/css/tupi.css': 'src/less/build.less'
+        }
+      },
+      minify: {
+        options: {
+          cleancss: true,
+          report: 'min'
+        },
+        files: {
+          'dist/css/tupi.min.css': 'dist/css/tupi.css'
+        }
+      }
+    },
+
+
     jshint: {
       options: {
         jshintrc: '.jshintrc'
@@ -44,6 +66,9 @@ module.exports = function (grunt) {
   // load all grunt tasks matching the `grunt-*` pattern
   require('load-grunt-tasks')(grunt);
 
+  // CSS dist task
+  grunt.registerTask('dist-stylesheets', ['less']);
+
   // load jshint task
   grunt.loadNpmTasks('grunt-contrib-jshint');
 
@@ -54,6 +79,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-bump');
 
   // Default task
-  grunt.registerTask('default', ['test']);
+  grunt.registerTask('default', ['dist-stylesheets', 'test']);
 
 };
