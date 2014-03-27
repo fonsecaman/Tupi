@@ -1,0 +1,14 @@
+# Dependencies
+markdown:         rdiscount
+pygments:         true
+
+# Permalinks
+permalink:        pretty
+
+# Server
+source:           docs
+host:             0.0.0.0
+port:             9001
+baseurl:          /
+url:              http://ABS-org.github.io/Tupi
+encoding:         UTF-8
