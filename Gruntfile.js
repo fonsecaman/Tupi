@@ -32,6 +32,30 @@ module.exports = function (grunt) {
       }
     },
 
+    /************************************
+     * grunt-contrib-concat
+     * Concatenate files
+     ************************************/
+    concat: {
+      bootstrap: {
+        src: [
+          'src/js/transition.js',
+          'src/js/alert.js',
+          'src/js/button.js',
+          'src/js/carousel.js',
+          'src/js/collapse.js',
+          'src/js/dropdown.js',
+          'src/js/modal.js',
+          'src/js/tooltip.js',
+          'src/js/popover.js',
+          'src/js/scrollspy.js',
+          'src/js/tab.js',
+          'src/js/affix.js'
+        ],
+        dest: 'dist/js/<%= pkg.name %>.js'
+      }
+    },
+
 
     /************************************
      * grunt-contrib-jshint
@@ -90,6 +114,9 @@ module.exports = function (grunt) {
   // load all grunt tasks matching the `grunt-*` pattern
   require('load-grunt-tasks')(grunt);
 
+  // JS distribution task.
+  grunt.registerTask('dist-js', ['concat']);
+
   // CSS dist task
   grunt.registerTask('dist-stylesheets', ['less']);
 
@@ -103,6 +130,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-bump');
 
   // Default task
-  grunt.registerTask('default', ['dist-stylesheets', 'watch']);
+  grunt.registerTask('default', ['dist-stylesheets', 'dist-js', 'watch']);
 
 };
