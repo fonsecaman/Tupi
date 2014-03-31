@@ -56,6 +56,20 @@ module.exports = function (grunt) {
       }
     },
 
+    /************************************
+     * grunt-contrib-uglify
+     * Minify files
+     ************************************/
+    uglify: {
+      options: {
+        report: 'min'
+      },
+      bootstrap: {
+        src: 'dist/js/<%= pkg.name %>.js',
+        dest: 'dist/js/<%= pkg.name %>.min.js'
+      }
+    },
+
 
     /************************************
      * grunt-contrib-jshint
@@ -115,7 +129,7 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
 
   // JS distribution task.
-  grunt.registerTask('dist-js', ['concat']);
+  grunt.registerTask('dist-js', ['concat', 'uglify']);
 
   // CSS dist task
   grunt.registerTask('dist-stylesheets', ['less']);
