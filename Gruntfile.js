@@ -16,9 +16,14 @@ module.exports = function (grunt) {
      * LESS Task, compile and minify stylesheets
      ************************************/
     less: {
-      compile: {
+      compileCore: {
         files: {
           'dist/css/tupi.css': 'src/less/build.less'
+        }
+      },
+      compileDocs: {
+        files: {
+          'docs/css/tupi.docs.css': 'src/less/themes/docs.less'
         }
       },
       minify: {
@@ -27,7 +32,8 @@ module.exports = function (grunt) {
           report: 'min'
         },
         files: {
-          'dist/css/tupi.min.css': 'dist/css/tupi.css'
+          'dist/css/tupi.min.css': 'dist/css/tupi.css',
+          'docs/css/tupi.docs.min.css': 'docs/css/tupi.docs.css'
         }
       }
     },
