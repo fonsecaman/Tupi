@@ -8,3 +8,6 @@ Você pode usar o **[Tupi](http://abs-org.github.io/Tupi/)** da maneira que acha
 - Baixar manualmente a [última versão](https://github.com/ABS-org/Tupi/releases/tag/0.0.25)
 
 Após baixar é só referenciar o arquivo de estilo: ```~/dist/css/tupi.min.css```
+
+
+**© ABS-org** - [Comunidade de Práticas](http://atencaobasica.org.br/)
