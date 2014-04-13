@@ -1,6 +1,6 @@
 {
   "name": "tupi",
-  "version": "0.0.25",
+  "version": "0.0.29",
   "description": "Coleção de estilos e componentes reutilizáveis.",
   "scripts": {
     "test": "."
