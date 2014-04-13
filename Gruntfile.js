@@ -89,6 +89,16 @@ module.exports = function (grunt) {
     },
 
     /************************************
+     * grunt-shell
+     * Run shell commands
+     ************************************/
+    shell : {
+      jekyll : {
+        command : 'jekyll serve --baseurl "" --w'
+      }
+    },
+
+    /************************************
      * grunt-contrib-watch
      * Watch some files and tasks
      ************************************/
@@ -150,6 +160,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-bump');
 
   // Default task
-  grunt.registerTask('default', ['dist-stylesheets', 'dist-js', 'watch']);
+  grunt.registerTask('default', ['dist-stylesheets', 'dist-js', 'shell:jekyll', 'watch']);
 
 };
