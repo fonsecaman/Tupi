@@ -95,6 +95,9 @@ module.exports = function (grunt) {
     shell : {
       jekyll : {
         command : 'jekyll serve --baseurl "" --w'
+      },
+      deployDocs : {
+        command: 'git subtree push --prefix docs/ origin gh-pages'
       }
     },
 
@@ -158,6 +161,9 @@ module.exports = function (grunt) {
 
   // Use grunt-bump for changing version number
   grunt.loadNpmTasks('grunt-bump');
+
+  // Deploy task
+  grunt.registerTask('deploy', ['shell:deployDocs']);
 
   // Default task
   grunt.registerTask('default', ['dist-stylesheets', 'dist-js', 'shell:jekyll', 'watch']);
