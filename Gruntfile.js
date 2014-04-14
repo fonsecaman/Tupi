@@ -23,7 +23,7 @@ module.exports = function (grunt) {
       },
       compileDocs: {
         files: {
-          'docs/css/tupi.docs.css': 'src/less/themes/docs.less'
+          'docs/css/tupi.docs.css': 'src/less/themes/docs/theme.less'
         }
       },
       minify: {
