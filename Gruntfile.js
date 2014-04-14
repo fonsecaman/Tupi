@@ -147,11 +147,10 @@ module.exports = function (grunt) {
   // load all grunt tasks matching the `grunt-*` pattern
   require('load-grunt-tasks')(grunt);
 
-  // JS distribution task.
-  grunt.registerTask('dist-js', ['concat', 'uglify']);
-
-  // CSS dist task
+  // JS and CSS dist task
   grunt.registerTask('dist-css', ['less']);
+  grunt.registerTask('dist-js', ['concat', 'uglify']);
+  grunt.registerTask('dist', ['dist-css', 'dist-js']);
 
   // Default task
   grunt.registerTask('test', ['jshint']);
@@ -163,6 +162,6 @@ module.exports = function (grunt) {
   grunt.registerTask('deploy', ['shell:deployDocs']);
 
   // Default task
-  grunt.registerTask('default', ['dist-css', 'dist-js', 'shell:jekyll', 'watch']);
+  grunt.registerTask('default', ['dist', 'shell:jekyll', 'watch']);
 
 };
