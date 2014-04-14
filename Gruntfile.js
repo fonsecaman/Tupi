@@ -77,13 +77,13 @@ module.exports = function (grunt) {
       options: {
         report: 'min'
       },
-      bootstrap: {
-        src: 'dist/js/<%= pkg.name %>.js',
-        dest: 'dist/js/<%= pkg.name %>.min.js'
-      },
       plugins: {
         src: 'dist/js/plugins.js',
         dest: 'dist/js/plugins.min.js'
+      },
+      bootstrap: {
+        src: 'dist/js/<%= pkg.name %>.js',
+        dest: 'dist/js/<%= pkg.name %>.min.js'
       },
       mainDocs: {
         src: 'docs/js/main.js',
