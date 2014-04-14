@@ -86,6 +86,18 @@ module.exports = function (grunt) {
       }
     },
 
+    /************************************
+     * grunt-contrib-copy
+     * Copy files and folders to docs/ path
+     ************************************/
+    copy: {
+      bootstrap: {
+        expand: true,
+        cwd: 'dist/js/',
+        src: '*.min.js',
+        dest: 'docs/js/'
+      }
+    },
 
     /************************************
      * grunt-contrib-jshint
