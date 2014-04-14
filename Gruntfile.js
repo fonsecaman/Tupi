@@ -59,6 +59,12 @@ module.exports = function (grunt) {
           'src/js/affix.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
+      },
+      plugins: {
+        src: [
+          'bower_components/classie/classie.js'
+        ],
+        dest: 'dist/js/plugins.js'
       }
     },
 
@@ -73,6 +79,10 @@ module.exports = function (grunt) {
       bootstrap: {
         src: 'dist/js/<%= pkg.name %>.js',
         dest: 'dist/js/<%= pkg.name %>.min.js'
+      },
+      plugins: {
+        src: 'dist/js/plugins.js',
+        dest: 'dist/js/plugins.min.js'
       }
     },
 
