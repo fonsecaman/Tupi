@@ -43,6 +43,12 @@ module.exports = function (grunt) {
      * Concatenate files
      ************************************/
     concat: {
+      plugins: {
+        src: [
+          'bower_components/classie/classie.js'
+        ],
+        dest: 'dist/js/plugins.js'
+      },
       bootstrap: {
         src: [
           'src/js/transition.js',
@@ -60,12 +66,6 @@ module.exports = function (grunt) {
           'src/js/codrops-navigator.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
-      },
-      plugins: {
-        src: [
-          'bower_components/classie/classie.js'
-        ],
-        dest: 'dist/js/plugins.js'
       }
     },
 
