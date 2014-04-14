@@ -1,0 +1,160 @@
+//
+// Codrops Navigator
+// --------------------------------------------------
+
+
+// cdpHorizontalMenu v1.0.0
+// -------------------------
+.nav-horizontal {
+  position: fixed;
+  width: 100%;
+  background: @white;
+  text-align: left;
+  border-bottom: 2px solid lighten(@black, 62.5%);
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  .link-menu-item {
+    font-weight: 700;
+    padding: 1em 2em;
+    display: inline-block;
+    &:hover {
+      background: lighten(@black, 72.5%);
+    }
+  }
+  .nav-atoms {
+    .link-menu-item {
+      color: @color-red;
+    }
+  }
+  .nav-molecules {
+    .link-menu-item {
+      color: @color-yellow;
+    }
+  }
+  .nav-organisms {
+    .link-menu-item {
+      color: @color-green;
+    }
+  }
+  .nav-templates {
+    .link-menu-item {
+      color: @color-blue;
+    }
+  }
+  .nav-devices {
+    .link-menu-item {
+      color: #555;
+    }
+  }
+  > ul,
+  .nav-horizontal-submenu-inner {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1.875em;
+    > div {
+      width: 20%;
+      float: left;
+      padding: 0 2em 0;
+      ul {
+        height: 14em;
+      }
+      a  {
+        line-height: 2em;
+      }
+    }
+    &:before,
+    &:after {
+      content: " ";
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+  }
+  .nav-horizontal-submenu-open {
+    .nav-horizontal-submenu {
+      display: block;
+      padding-bottom: 3em;
+    }
+    .link-menu-item,
+    .link-item {
+      color: #fff;
+      > &:hover {
+        color: #fff;
+      }
+    }
+    &.nav-atoms {
+      .link-menu-item {
+        background: @color-red;
+      }
+    }
+    &.nav-molecules {
+      .link-menu-item {
+        background: @color-yellow;
+      }
+    }
+    &.nav-organisms {
+      .link-menu-item {
+        background: @color-green;
+      }
+    }
+    &.nav-templates {
+      .link-menu-item {
+        background: @color-blue;
+      }
+    }
+    &.nav-devices {
+      .link-menu-item {
+        background: #555;
+      }
+    }
+  }
+  .nav-horizontal-submenu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    .menu-title {
+      padding: 2em 0 0.6em;
+      margin: 0;
+      font-size: 160%;
+      font-weight: 300;
+    }
+    &.sub-atoms {
+      background: @color-red;
+      .menu-title {
+        color: darken(@color-red, 20%);
+      }
+    }
+    &.sub-molecules {
+      background: @color-yellow;
+      .menu-title {
+        color: darken(@color-yellow, 20%);
+      }
+    }
+    &.sub-organisms {
+      background: @color-green;
+      .menu-title {
+        color: darken(@color-green, 20%);
+      }
+    }
+    &.sub-templates {
+      background: @color-blue;
+      .menu-title {
+        color: darken(@color-blue, 20%);
+      }
+    }
+    &.sub-devices {
+      background: #555;
+      .menu-title {
+        color: #333;
+      }
+    }
+  }
+  > ul > li {
+    display: inline-block;
+  }
+}
