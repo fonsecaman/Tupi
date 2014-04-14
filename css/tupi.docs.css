@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600);
 /* Build file */
 /* Build file */
 .clearfix:before,
@@ -6348,6 +6349,48 @@ table th[class*="col-"] {
   .modal-lg {
     width: 900px;
   }
+}
+/* ==========================================================================
+Main: minimum styles in this file
+========================================================================== */
+/* Main styles
+========================================================================== */
+body {
+  background: #373e49;
+}
+.section {
+  height: 45em;
+  padding-top: 8em;
+}
+.section .wrapper {
+  width: 80%;
+  margin: 0 10%;
+}
+/* Home styles
+========================================================================== */
+.section-home {
+  text-align: center;
+  color: #ffffff;
+}
+.section-home h1 {
+  font-size: 2.2em;
+  text-align: center;
+  margin-top: 2em;
+}
+.section-home p {
+  font-size: 1.1em;
+  font-weight: 200;
+  line-height: 1.8em;
+}
+.section-home .btn {
+  margin-top: 3em;
+  border: 1px solid #ffffff;
+  padding: 1em 3em;
+  color: #ffffff;
+}
+.section-home .btn:hover {
+  background: #ffffff;
+  color: #373e49;
 }
 .btn-default,
 .btn-primary,
