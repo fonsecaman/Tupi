@@ -153,9 +153,6 @@ module.exports = function (grunt) {
   // CSS dist task
   grunt.registerTask('dist-stylesheets', ['less']);
 
-  // load jshint task
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-
   // Default task
   grunt.registerTask('test', ['jshint']);
 
