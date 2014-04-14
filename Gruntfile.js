@@ -151,7 +151,7 @@ module.exports = function (grunt) {
   grunt.registerTask('dist-js', ['concat', 'uglify']);
 
   // CSS dist task
-  grunt.registerTask('dist-stylesheets', ['less']);
+  grunt.registerTask('dist-css', ['less']);
 
   // Default task
   grunt.registerTask('test', ['jshint']);
@@ -163,6 +163,6 @@ module.exports = function (grunt) {
   grunt.registerTask('deploy', ['shell:deployDocs']);
 
   // Default task
-  grunt.registerTask('default', ['dist-stylesheets', 'dist-js', 'shell:jekyll', 'watch']);
+  grunt.registerTask('default', ['dist-css', 'dist-js', 'shell:jekyll', 'watch']);
 
 };
