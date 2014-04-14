@@ -83,6 +83,10 @@ module.exports = function (grunt) {
       plugins: {
         src: 'dist/js/plugins.js',
         dest: 'dist/js/plugins.min.js'
+      },
+      mainDocs: {
+        src: 'docs/js/main.js',
+        dest: 'docs/js/main.min.js'
       }
     },
 
