@@ -155,9 +155,6 @@ module.exports = function (grunt) {
   // Default task
   grunt.registerTask('test', ['jshint']);
 
-  // Use grunt-bump for changing version number
-  grunt.loadNpmTasks('grunt-bump');
-
   // Deploy task
   grunt.registerTask('deploy', ['shell:deployDocs']);
 
