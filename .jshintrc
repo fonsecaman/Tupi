@@ -4,6 +4,7 @@
 
 {
     "maxerr"        : 5,
-    "camelcase"     : false,
-    "indent"        : 2
+    "camelcase"     : true,
+    "indent"        : 2,
+    "expr"          : true
 }
