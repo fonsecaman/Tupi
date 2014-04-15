@@ -13,6 +13,11 @@
     "components",
     "coleções"
   ],
+  "main": [
+    "dist/css/tupi.min.css",
+    "dist/js/plugins.min.js",
+    "dist/js/tupi.min.js"
+  ],
   "license": "MIT",
   "ignore": [
     "**/.*",
