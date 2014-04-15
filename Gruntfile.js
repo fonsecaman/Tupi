@@ -65,6 +65,12 @@ module.exports = function (grunt) {
           'src/js/affix.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.bootstrap.js'
+      },
+      codrops: {
+        src: [
+          'src/js/codrops-navigator.js'
+        ],
+        dest: 'dist/js/<%= pkg.name %>.codrops.js'
       }
     },
 
