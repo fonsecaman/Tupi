@@ -105,7 +105,7 @@ module.exports = function (grunt) {
      * Copy files and folders to docs/ path
      ************************************/
     copy: {
-      bootstrap: {
+      javascripts: {
         expand: true,
         cwd: 'dist/js/',
         src: '*.min.js',
