@@ -87,8 +87,12 @@ module.exports = function (grunt) {
         dest: 'dist/js/plugins.min.js'
       },
       bootstrap: {
-        src: 'dist/js/<%= pkg.name %>.js',
-        dest: 'dist/js/<%= pkg.name %>.min.js'
+        src: 'dist/js/<%= pkg.name %>.bootstrap.js',
+        dest: 'dist/js/<%= pkg.name %>.bootstrap.min.js'
+      },
+      codrops: {
+        src: 'dist/js/<%= pkg.name %>.codrops.js',
+        dest: 'dist/js/<%= pkg.name %>.codrops.min.js'
       },
       mainDocs: {
         src: 'docs/js/main.js',
