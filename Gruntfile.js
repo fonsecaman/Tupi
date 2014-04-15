@@ -51,18 +51,18 @@ module.exports = function (grunt) {
       },
       bootstrap: {
         src: [
-          'src/js/transition.js',
-          'src/js/alert.js',
-          'src/js/button.js',
-          'src/js/carousel.js',
-          'src/js/collapse.js',
-          'src/js/dropdown.js',
-          'src/js/modal.js',
-          'src/js/tooltip.js',
-          'src/js/popover.js',
-          'src/js/scrollspy.js',
-          'src/js/tab.js',
-          'src/js/affix.js'
+          'src/js/bootstrap/transition.js',
+          'src/js/bootstrap/alert.js',
+          'src/js/bootstrap/button.js',
+          'src/js/bootstrap/carousel.js',
+          'src/js/bootstrap/collapse.js',
+          'src/js/bootstrap/dropdown.js',
+          'src/js/bootstrap/modal.js',
+          'src/js/bootstrap/tooltip.js',
+          'src/js/bootstrap/popover.js',
+          'src/js/bootstrap/scrollspy.js',
+          'src/js/bootstrap/tab.js',
+          'src/js/bootstrap/affix.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.bootstrap.js'
       },
