@@ -191,6 +191,9 @@ module.exports = function (grunt) {
   // Test task
   grunt.registerTask('test', ['jshint']);
 
+  // Jekyll task
+  grunt.registerTask('jekyll', ['shell:jekyll']);
+
   // Deploy task
   grunt.registerTask('deploy', ['shell:deployDocs']);
 
