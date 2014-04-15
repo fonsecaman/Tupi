@@ -154,6 +154,13 @@ module.exports = function (grunt) {
         options: {
           livereload: true
         }
+      },
+      javascripts: {
+        files: '/src/js/**/*.js',
+        tasks: ['dist-js'],
+        options: {
+          livereload: true
+        }
       }
     },
 
