@@ -71,6 +71,14 @@ module.exports = function (grunt) {
           'src/js/codrops/navigator.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.codrops.js'
+      },
+      tupi: {
+        src: [
+          'dist/js/plugins.js',
+          'src/js/bootstrap/**/*.js',
+          'src/js/codrops/**/*.js'
+        ],
+        dest: 'dist/js/<%= pkg.name %>.js'
       }
     },
 
@@ -93,6 +101,10 @@ module.exports = function (grunt) {
       codrops: {
         src: 'dist/js/<%= pkg.name %>.codrops.js',
         dest: 'dist/js/<%= pkg.name %>.codrops.min.js'
+      },
+      tupi: {
+        src: 'dist/js/<%= pkg.name %>.js',
+        dest: 'dist/js/<%= pkg.name %>.min.js'
       },
       mainDocs: {
         src: 'docs/js/main.js',
