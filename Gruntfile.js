@@ -192,7 +192,7 @@ module.exports = function (grunt) {
 
   // JS and CSS dist task
   grunt.registerTask('dist-css', ['less']);
-  grunt.registerTask('dist-js', ['concat', 'uglify']);
+  grunt.registerTask('dist-js', ['concat', 'uglify', 'copy']);
   grunt.registerTask('dist', ['dist-css', 'dist-js']);
 
   // Test task
