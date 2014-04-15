@@ -75,8 +75,8 @@ module.exports = function (grunt) {
       tupi: {
         src: [
           'dist/js/plugins.js',
-          'src/js/bootstrap/**/*.js',
-          'src/js/codrops/**/*.js'
+          'dist/js/tupi.bootstrap.js',
+          'dist/js/tupi.codrops.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
       }
