@@ -198,6 +198,6 @@ module.exports = function (grunt) {
   grunt.registerTask('deploy', ['shell:deployDocs']);
 
   // Default task
-  grunt.registerTask('default', ['dist', 'shell:jekyll', 'watch']);
+  grunt.registerTask('default', ['watch']);
 
 };
