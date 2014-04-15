@@ -68,7 +68,7 @@ module.exports = function (grunt) {
       },
       codrops: {
         src: [
-          'src/js/codrops-navigator.js'
+          'src/js/codrops/navigator.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.codrops.js'
       }
